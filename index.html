@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My First Web Application! </title>
+        <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#footer">NIM</a></li>
+            </ul>
+        </div>
+        <div id="about">
+            <img src="assets/photo.jpg">
+            <h1>William Fu</h1>
+            <p>Undergraduate student at Institut Teknologi Bandung</p>
+        </div>
+        <div class="center">
+            <h3> A Message </h3>
+            <div class="message"> 
+                <p>
+                    Hi, there! My name is William Fu and I'm currently studying at Institut Teknologi Bandung, Computer Science major.
+                    This is my first web application, made with html, css, dan basic javascript. You can check it out on my Github 
+                    <a href="https://github.com/williammfu/" target="_blank">here!</a>. I'm looking forward to learning more on web based development
+                    in the IF3110 Course! 😁😁😁 
+                </p>
+            </div>
+        </div> 
+        <div class="center">
+            <h3>Education</h3>
+            <h4>Institut Teknologi Bandung - Undergraduate</h4>
+            <p>2018 - present</p>
+            <h4>Santa Ursula BSD - Senior High School</h4>
+            <p>2015 - 2018</p>
+        </div> 
+        <div class="center">
+            <h3>Organization</h3>
+            <h4>Himpunan Mahasiswa Informatika ITB</h4>
+            <p>Data and Archive staff</p>
+            <h4>Arkavidia 7.0</h4>
+            <p>Deputy Head of Design</p>
+            <h4>Unit Tenis ITB</h4>
+            <p>Media and Communications staff</p>
+        </div>
+        <div id="footer">
+            <h3> William Fu </h3>
+            <h4> 13518055 </h4>
+        </div>
+
+        <!--Basic Javascript in script block here-->
+        <script>
+            // Sticky navigation bar function on scroll
+            window.onscroll = function() { stickyScroll() };
+            
+            // Navigation bar
+            var navbar = document.getElementById('navbar');
+            
+            // Sticky measures how much offset there is between
+            // nav bar dan top of display
+            var sticky = navbar.offsetTop;
+
+            function stickyScroll() {
+                // Measures the vertical offset between the navbar
+                // and the display top
+                if (window.pageYOffset >= sticky) {
+                    // Appends the class sticky on the navigation bar
+                    navbar.classList.add("sticky");
+                } else {
+                    // Removes the class sticky from the navigation bar
+                    navbar.classList.remove("sticky");
+                }
+            }
+
+        </script>
+    </body>
+</html>
